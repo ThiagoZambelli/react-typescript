@@ -34,6 +34,25 @@
 - react-typescript (nome da aplicação criada)
 
 &nbsp;
+&nbsp;
+
+## Utilização de ternario para estilos:
+
+>Podemos usar um ternario para a alocação de estilos no JS (Consequentemente React)
+
+~~~JavaScript
+const objOn = true;
+const style = {
+  backgroundColor: objOn ? "green" : "red"
+}
+
+<button style={style}>
+</button>
+
+~~~
+
+
+&nbsp;
 
 ---
 
