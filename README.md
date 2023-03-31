@@ -36,6 +36,13 @@
 &nbsp;
 &nbsp;
 
+## Problema de modulação do CSS
+
+>Não sei se é por causa da defasagem de tempo da aula mas algumas coisas estao bem diferentes entre o que foi aprendido em ccursoso anteriors e neste. Principalmente com relação ao CSS module.
+
+&nbsp;
+&nbsp;
+
 ## Utilização de ternario para estilos:
 
 >Podemos usar um ternario para a alocação de estilos no JS (Consequentemente React)
@@ -48,6 +55,35 @@ const style = {
 
 <button style={style}>
 </button>
+
+~~~
+
+
+&nbsp;
+&nbsp;
+
+## Desestruturação das props ao serem enviadas:
+
+>Ao mandar um Obj como prop de um componente, podemos mandar prop a pro (utilizado principalmente quando queremos mandar uma parte delas), ou podemos mandar o Obj em forma de spred
+
+  - Forma 1:
+
+~~~JavaScript
+<Componente 
+  prop1={obj.elemento1}
+  prop2={obj.elemento2}
+  prop3={obj.elemento3}
+  prop4={obj.elemento4}
+/>
+
+~~~
+
+  - Forma 2:
+
+~~~JavaScript
+<Componente 
+  {...obj}
+/>
 
 ~~~
 
@@ -89,3 +125,28 @@ const style = {
   - Também criamos um componente com function component (a forma mais atual de se escrever componentes desde a versão 16.8), e mostramos como é mais simples criarmos dessa forma.
 - Utilizar o método map para renderizar arrays.
   - Renderizamos arrays de JSX com o método map, mostrando que assim conseguimos aproveitar parte do JSX e mudar apenas o valor de item para item, utilizando assim o princípio DRY (Don't Repeat Yourself).
+
+&nbsp;
+
+### Aula 3:
+- Usar o CSS inline;
+  - Aprendemos como criar o CSS inline direto no atributo, como variável JS e utilizando condicionais para mudar o estilo.
+- Utilizar CSS e Sass no projeto;
+  - Vimos como importar CSS e SASS no projeto é fácil dentro de um projeto criado com Create React App.
+- Colocar o CSS Modules em um projeto com Create React App + Typescript;
+  - Configuramos o projeto para aceitar CSS Modules.
+Vantagens de se utilizar CSS Modules.
+- Discutimos as vantagens de se utilizar CSS Modules na aplicação.
+
+&nbsp;
+
+### Aula 4:
+
+- Adicionar informações externas ao componente com Props;
+  - Aprendemos a utilizar propriedades externas para reutilizar componentes de forma única.
+- Funciona o props.children;
+  - Vimos que o React disponibiliza uma props padrão chamada children, que ao contrário das outras props, é escrita dentro do componente, abrindo e fechando a tag como em uma tag HTML.
+- O key (chaves) é importante em arrays no React;
+  - Entendemos mais a fundo como o React trabalha com arrays, e como o key é importante para que ele não se perca entre os itens deste array.
+- Usar spread operator de forma consciente para passar props para os componentes;
+  - Utilizamos o spread operator para poder passar todos os itens de um objeto como props para o componente, também pensamos como isso pode se tornar um problema.

@@ -1,3 +1,4 @@
+import Item from './Item';
 import style from './Lista.module.css'
 
 function Lista() {
@@ -18,13 +19,15 @@ function Lista() {
 ]
   return (
     <aside className={style.listaTarefas}>
-        <h2> Estudos do dia</h2>
+        <h2>Estudos do dia</h2>
         <ul>
             {tarefas.map((tarefa) => (
-                <li key={tarefa.id} className={style.item}>
-                    <h3>{tarefa.tarefa}</h3>
-                    <span>{tarefa.tempo}</span>
-                </li>
+                <Item 
+                    {...tarefa}
+                    // id={tarefa.id}
+                    // tarefa={tarefa.tarefa}
+                    // tempo={tarefa.tempo} 
+                />
             ))}            
         </ul>
     </aside>
