@@ -1,9 +1,10 @@
+import { ITarefa } from '../../../types/tarefas'
 import style from './Item.module.css'
 
-function Item({tarefa, id, tempo}:{id:number, tarefa:string, tempo:string }) {
+function Item({tarefa, tempo, selecionado, completado, id}:ITarefa) {
     
     return (
-        <li key={id} className={style.item}>
+        <li className={style.item}>
             <h3>{tarefa}</h3>
             <span>{tempo}</span>
         </li>

@@ -24,6 +24,17 @@
 ---
 
 &nbsp;
+&nbsp;
+
+## UUid
+
+> Pacote de extenção do NPM para gerar IDs 
+- O comando para instalação é `npm i uuid`
+
+>A importação do pacote foi feita com o `import {v4 as uuidv4} from 'uuid'`, porem o typescrip pediu para crir uma interface de tipo para ele, isso foi feito com o comando `npm i --save-dev @types/uuid` fornecido pelo proprio typescript
+
+
+&nbsp;
 
 ## Criação do projeto com TypeScript
 
@@ -150,3 +161,18 @@ Vantagens de se utilizar CSS Modules.
   - Entendemos mais a fundo como o React trabalha com arrays, e como o key é importante para que ele não se perca entre os itens deste array.
 - Usar spread operator de forma consciente para passar props para os componentes;
   - Utilizamos o spread operator para poder passar todos os itens de um objeto como props para o componente, também pensamos como isso pode se tornar um problema.
+
+&nbsp;
+
+### Aula 4:
+
+- O React utiliza os estados para atualizar os componentes;
+  - Aprendemos como o React guarda informações que serão importantes para uma possível nova renderização de um componente.
+- Criar estados com function components e class components;
+  - Criamos estados tanto com function components quanto com class components, entendendo como se cria esses estados em cada tipo.
+- Controlar campos de um Formulário com estados;
+  - Aprendemos a diferença de um formulário/input controlado e não controlado, e como podemos controlá-los para pegar/mudar seus campos como quisermos.
+- Criar interfaces e reutilizá-las;
+  - Vimos como o Typescript nos dá uma forma de criar interfaces para podermos descrever tipos mais complexos, como os props dos componentes.
+- Utilizar props e para informar uma mudança de estado;
+  - Utilizamos a junção de props + state para podermos passar state para outros componentes e para podermos avisar que um estado deve ser mudado.

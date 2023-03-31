@@ -1,20 +1,48 @@
 import React from 'react';
 import Botao from '../Botao';
 import style from './Formulario.module.css';
+import { ITarefa } from '../../types/tarefas';
+import {v4 as uuidv4} from 'uuid'
 
-class Formulario extends React.Component {
+class Formulario extends React.Component<{
+    setTarefas: React.Dispatch<React.SetStateAction<ITarefa[]>>
+}>{
+    state = {
+        tarefa: "",
+        tempo: "00:00"        
+    }
+
+    novaTarefa(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        this.props.setTarefas(antigas =>
+            [...antigas,
+            {
+                ...this.state,
+                selecionado: false,
+                completado: false,
+                id: uuidv4()
+            }
+            ])
+        this.setState({
+            tarefa: "",
+            tempo: "00:00"
+        })
+    }
+
     render() {
         return (
-            <form className={style.novaTarefa}>
+            <form className={style.novaTarefa} onSubmit={this.novaTarefa.bind(this)}>
                 <div className={style.inputContainer}>
                     <label htmlFor='tarefa'>
                         Adicione um novo estudo
                     </label>
-                    <input 
+                    <input
                         type='text'
                         name='tarefa'
                         id='tarefa'
                         placeholder='O que você quer estudar?'
+                        value={this.state.tarefa}
+                        onChange={evento => this.setState({ ...this.state, tarefa: evento.target.value })}
                         required
                     />
                 </div>
@@ -29,11 +57,12 @@ class Formulario extends React.Component {
                         id='tempo'
                         min="00:00:00"
                         max="01:30:00"
+                        value={this.state.tempo}
+                        onChange={evento => this.setState({ ...this.state, tempo: evento.target.value })}
                         required
                     />
                 </div>
-                <Botao texto='Adicionar'/>
-                   
+                <Botao texto='Adicionar' type="submit" />
             </form>
         )
     }

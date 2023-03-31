@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Botao.module.css'
 
-class Botao extends React.Component<{texto:string}>{
+class Botao extends React.Component<{ texto: string, type?: "button" | "submit" | "reset" | undefined }>{
     render() {
-        return(
-            <button className={styles.botao}>
+        const {type= "button" } = this.props;
+        return (
+            <button type={type} className={styles.botao}>
                 {this.props.texto}
             </button>
         )
