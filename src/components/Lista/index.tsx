@@ -4,9 +4,12 @@ import Item from './Item';
 import style from './Lista.module.css'
 
 
+interface ILista{
+    tarefas: ITarefa[],
+    selecionaTarefa: (tarefaSelecionada: ITarefa) => void
+}
 
-
-function Lista({tarefas}:{tarefas: ITarefa[]}) {    
+function Lista({tarefas, selecionaTarefa }:ILista) {    
 
     return (
         <aside className={style.listaTarefas}>
@@ -14,7 +17,9 @@ function Lista({tarefas}:{tarefas: ITarefa[]}) {
             <ul>
                 {tarefas.map((tarefa) => (
                     <Item
+                        selecionaTarefa={selecionaTarefa}
                         {...tarefa}
+                        key={tarefa.id}
                     // id={tarefa.id}
                     // tarefa={tarefa.tarefa}
                     // tempo={tarefa.tempo} 

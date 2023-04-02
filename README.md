@@ -1,17 +1,22 @@
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=36&pause=1000&color=4F9C20&width=600&height=60&lines=Seja+Bem-Vindo+!!!)](https://git.io/typing-svg)
+
 <img align="right" width="50%" style="margin-top:-20px" src="public/eu.png">
 
 </br>
 </br>
 
 <div dsplay="inline-block">
+
  
- <h1 align="left">Bem-Vindo ao Projeto -> React com Typescript</h1>
+ <h1 align="left">Projeto -> React com Typescript</h1>
  <h2 align="left">Feito por : Thiago Zambelli</h2>
  
   <a href="https://www.linkedin.com/in/thiagozambelli">
     <img width="80px" src="https://i.ibb.co/RyZx12b/linkedin.png" alt="linkedin" style="vertical-align:top;">
   </a>
 </div>
+
+
 
 &nbsp;
 
@@ -24,6 +29,9 @@
 ---
 
 &nbsp;
+
+&nbsp;
+
 &nbsp;
 
 ## UUid
@@ -36,6 +44,35 @@
 
 &nbsp;
 
+&nbsp;
+
+&nbsp;
+
+## Selecionando Itens
+
+> Para o funcionamento da aplicação era necessario que os itens da lista fossem selecionaveis. Por tanto, foi criado uma variavel para eles com o nome de `selecionado = false`, gerando um booleano com o valor falso. Para que fosse usado o `useState` para diferenciar itens selecionados fiemos assim:
+
+~~~TypeScript
+function selecionaTarefa(tarefaSelecionada: ITarefa){
+    setSelecionado(tarefaSelecionada);
+    setTarefas(antigas => antigas.map(tarefa => ({
+      ...tarefa,
+      selecionado: tarefa.id === tarefaSelecionada.id ? true : false
+    })))
+  }
+~~~
+  > Uma função `selecionarTarefa` que pega o item selecionado, faz um map na lista de itens comparando os Ids e em seguida troca a variavel `selecionado` de `false` pra `true` em todos que forem os mesmos IDs e o inverso também.
+
+> Em seguida no `Item` e colocado uma ternaria para a condição `selecionado`, dando um estilo css diferente para os que tiverem o valor como `true`
+
+ - `className={`${style.item} ${selecionado ? style.itemSelecionado : ""}`}`
+ 
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 ## Criação do projeto com TypeScript
 
 > Comando `npx create-react-app --template typescript react-typescript --use-npm` onde
@@ -45,13 +82,18 @@
 - react-typescript (nome da aplicação criada)
 
 &nbsp;
+
 &nbsp;
 
+&nbsp;
 ## Problema de modulação do CSS
 
 >Não sei se é por causa da defasagem de tempo da aula mas algumas coisas estao bem diferentes entre o que foi aprendido em ccursoso anteriors e neste. Principalmente com relação ao CSS module.
 
 &nbsp;
+
+&nbsp;
+
 &nbsp;
 
 ## Utilização de ternario para estilos:
@@ -71,6 +113,9 @@ const style = {
 
 
 &nbsp;
+
+&nbsp;
+
 &nbsp;
 
 ## Desestruturação das props ao serem enviadas:
@@ -79,29 +124,29 @@ const style = {
 
   - Forma 1:
 
-~~~JavaScript
-<Componente 
-  prop1={obj.elemento1}
-  prop2={obj.elemento2}
-  prop3={obj.elemento3}
-  prop4={obj.elemento4}
-/>
-
-~~~
+    ~~~JavaScript
+    <Componente 
+      prop1={obj.elemento1}
+      prop2={obj.elemento2}
+      prop3={obj.elemento3}
+      prop4={obj.elemento4}
+    />    
+    ~~~
 
   - Forma 2:
 
-~~~JavaScript
-<Componente 
-  {...obj}
-/>
+    ~~~JavaScript
+    <Componente 
+      {...obj}
+    />
 
-~~~
+    ~~~
+
 
 
 &nbsp;
 
----
+&nbsp;
 
 &nbsp;
 
@@ -164,7 +209,7 @@ Vantagens de se utilizar CSS Modules.
 
 &nbsp;
 
-### Aula 4:
+### Aula 5:
 
 - O React utiliza os estados para atualizar os componentes;
   - Aprendemos como o React guarda informações que serão importantes para uma possível nova renderização de um componente.
@@ -176,3 +221,14 @@ Vantagens de se utilizar CSS Modules.
   - Vimos como o Typescript nos dá uma forma de criar interfaces para podermos descrever tipos mais complexos, como os props dos componentes.
 - Utilizar props e para informar uma mudança de estado;
   - Utilizamos a junção de props + state para podermos passar state para outros componentes e para podermos avisar que um estado deve ser mudado.
+
+### Aula 6:
+
+- Compartilhar valores comuns entre componentes;
+  - Aprendemos como criar um estado que será compartilhado entre vários componentes.
+- Extender interfaces;
+  - Usamos a facilidade de estender uma interface dentro de outra interface para reaproveitar código.
+- Adicionar classes CSS de forma condicional;
+  - Aprendemos a utilizar um ternário para mudar classes CSS de uma tag baseada em alguma prop com template string.
+- Criar pastas utilitárias;
+  - Debatemos sobre formas de criar pastas com funções utilitárias compartilhadas na aplicação.

@@ -1,20 +1,22 @@
 .listaTarefas {
-    grid-area: tarefas;
-    height: 100%;
+  grid-area: tarefas;
+  height: 100%;
 }
+
 .listaTarefas h2 {
   font-size: 1.25rem;
   margin-bottom: 12px;
-}  
+}
+
 .listaTarefas ul {
   max-height: 350px;
   overflow-y: scroll;
-    scrollbar-width: thin;
+  scrollbar-width: thin;
 }
-  
+
 @media screen and (min-width:1280px) {
-  
-    .listaTarefas h2{
+
+  .listaTarefas h2 {
     text-align: center;
     font-size: 2.25rem;
     margin-bottom: 24px;
@@ -26,17 +28,17 @@
   }
 }
 
-  
- 
-  
- .concluido {
-   display: block;   
-   background-repeat: no-repeat;
-   background-size: 38px 38px;
-   position: absolute;
-   top: 50%;
-   right: 12px;
-   transform: translateY(-50%);
-   width: 42px;
-   height: 43px;
- }
+
+
+
+.concluido {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 38px 38px;
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 43px;
+}
