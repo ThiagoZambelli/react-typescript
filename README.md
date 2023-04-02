@@ -1,5 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Playfair+Display&weight=700&size=36&pause=1000&color=4F9C20&width=600&height=60&lines=Seja+Bem-Vindo+!!!)](https://git.io/typing-svg)
 
+![Alt text](public/primeiro-projeto-typescript.png)
+
 <img align="right" width="50%" style="margin-top:-20px" src="public/eu.png">
 
 </br>
@@ -150,6 +152,38 @@ const style = {
 
 &nbsp;
 
+## useEffect():
+
+> Hook padrão do react que a função de alterar componentes quando alguma coisa muda.
+> O primeiro parametro é a função que vais ser executada, e o segundo é o que deve ser ecutado para ver a mudança.
+
+~~~JavaScript
+useEffect(() => {
+
+    },[selecionado])
+
+~~~
+
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+## Ciclo de vida dos componentes:
+
+- `componentWillMount` (antes de ser montado)
+- `componentDidMount` (acabou de ser montado)
+- `componentWillUpdate` (componente acabou de atualizar)
+- `componentWillUnmount` (componente vai ser desmontado)
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
 # Aulas - 
 
 ---
@@ -232,3 +266,16 @@ Vantagens de se utilizar CSS Modules.
   - Aprendemos a utilizar um ternário para mudar classes CSS de uma tag baseada em alguma prop com template string.
 - Criar pastas utilitárias;
   - Debatemos sobre formas de criar pastas com funções utilitárias compartilhadas na aplicação.
+
+### Aula 7:
+
+- Funciona o ciclo de vida de um componente;
+  - Entendemos como o ciclo de vida de um componente funciona, desde o seu nascimento até a sua morte.
+- Utilizar o useEffect;
+  - Utilizamos o useEffect para resolver um problema que tivemos e vimos como esse hook é importante no ecossistema React.
+- Desestruturar strings;
+  - Aprendemos que podemos desestruturar strings e que podemos colocar a opção downLevelIteration para que possamos fazer essa desestruturação.
+- Utilizar função recursiva;
+  - Criamos uma função recursiva para resolver o problema da contagem regressiva.
+- Refatorar um class component para um function component;
+  - Aprendemos como refatorar um class component para function component.

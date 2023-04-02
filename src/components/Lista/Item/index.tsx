@@ -9,8 +9,8 @@ function Item({ tarefa, tempo, selecionado, completado, id, selecionaTarefa }: I
 
     return (
         <li
-            className={`${style.item} ${selecionado ? style.itemSelecionado : ""}`}
-            onClick={() => selecionaTarefa({
+            className={`${style.item} ${selecionado ? style.itemSelecionado : ""} ${completado ? style.itemCompletado : ''}`}
+            onClick={() => !completado && selecionaTarefa({
                 tarefa,
                 tempo,
                 selecionado,
@@ -18,7 +18,7 @@ function Item({ tarefa, tempo, selecionado, completado, id, selecionaTarefa }: I
                 id
             })}>
             <h3>{tarefa}</h3>
-            <span>{tempo}</span>
+            <span>{tempo}</span>            
         </li>
     )
 }
